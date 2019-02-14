@@ -8,8 +8,8 @@ use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
 class GreetingResolver implements ResolverInterface
 {
-    public function sayHello(): string
+    public function sayHello(string $name): string
     {
-        return 'Hello, world!';
+        return sprintf('Hello, %s!', $name);
     }
 }

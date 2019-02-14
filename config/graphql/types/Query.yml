@@ -5,4 +5,8 @@ Query:
         fields:
             greeting:
                 type: String!
-                resolve: '@=resolver("App\\GraphQL\\Resolver\\GreetingResolver::sayHello")'
+                args:
+                    name:
+                        type: String!
+                        description: 'User name'
+                resolve: '@=resolver("App\\GraphQL\\Resolver\\GreetingResolver::sayHello", [args["name"]])'
