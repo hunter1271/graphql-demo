@@ -5,4 +5,4 @@ Query:
         fields:
             greeting:
                 type: String!
-                resolve: 'Hello, world!'
+                resolve: '@=resolver("App\\Resolver\\GreetingResolver::resolve")'
