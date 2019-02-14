@@ -5,4 +5,4 @@ Query:
         fields:
             greeting:
                 type: String!
-                resolve: '@=resolver("App\\Resolver\\GreetingResolver::resolve")'
+                resolve: '@=resolver("App\\GraphQL\\Resolver\\GreetingResolver::sayHello")'

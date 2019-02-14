@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Resolver;
+namespace App\GraphQL\Resolver;
 
 use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
 class GreetingResolver implements ResolverInterface
 {
-    public function resolve(): string
+    public function sayHello(): string
     {
         return 'Hello, world!';
     }
